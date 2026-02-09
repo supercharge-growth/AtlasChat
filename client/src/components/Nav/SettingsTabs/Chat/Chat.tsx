@@ -1,6 +1,7 @@
 import { memo } from 'react';
 import { showThinkingAtom } from '~/store/showThinking';
 import FontSizeSelector from './FontSizeSelector';
+import ClientApiKeys from './ClientApiKeys';
 import { ForkSettings } from './ForkSettings';
 import ChatDirection from './ChatDirection';
 import ToggleSwitch from '../ToggleSwitch';
@@ -91,6 +92,13 @@ const toggleSwitchConfigs = [
     hoverCardText: 'com_nav_info_resumable_streams',
     key: 'resumableStreams',
   },
+  {
+    stateAtom: store.clientSideApi,
+    localizationKey: 'com_nav_client_side_api',
+    switchId: 'clientSideApi',
+    hoverCardText: 'com_nav_info_client_side_api',
+    key: 'clientSideApi',
+  },
 ];
 
 function Chat() {
@@ -112,6 +120,7 @@ function Chat() {
           />
         </div>
       ))}
+      <ClientApiKeys />
       <ForkSettings />
     </div>
   );

@@ -43,6 +43,7 @@ const localStorageAtoms = {
   centerFormOnLanding: atomWithLocalStorage('centerFormOnLanding', true),
   showFooter: atomWithLocalStorage('showFooter', true),
   resumableStreams: atomWithLocalStorage('resumableStreams', true),
+  clientSideApi: atomWithLocalStorage('clientSideApi', false),
 
   // Commands settings
   atCommand: atomWithLocalStorage('atCommand', true),
